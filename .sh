@@ -12,6 +12,6 @@ if [ -x /sbin/apk ]; then
 wsl.exe -d alpine -u root apk add bash
 printf "please change the root password by executing \n\n   bash\n   bash <(printf \"wsl.exe -d alpine -u root passwd\")\n\n"
 wsl.exe -d alpine -u root apk add sudo
-wsl.exe -d alpine -u root printf "\n%%wheel ALL=(ALL) ALL"
+wsl.exe -d alpine -u root printf "\n%%wheel ALL=(ALL) ALL" >> /etc/sudoers
 wsl.exe -d alpine -u root usermod -aG wheel jj
 fi
