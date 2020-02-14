@@ -7,6 +7,6 @@ sudo yum install PackageKit-command-not-found
 sudo yum install podman-docker
 sudo yum install nano
 sudo yum install wget
-elif [ -x /usr/bin/apk ]; then
+elif [ -x /sbin/apk ]; then
 echo APK
 fi
