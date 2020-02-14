@@ -14,4 +14,5 @@ printf "please change the root password by executing \n\n   bash\n   bash <(prin
 wsl.exe -d alpine -u root apk add sudo
 wsl.exe -d alpine -u root printf "\n%%wheel ALL=(ALL) ALL" >> /etc/sudoers
 wsl.exe -d alpine -u root usermod -aG wheel jj
+wsl.exe -d alpine -u root apk add command-not-found
 fi
