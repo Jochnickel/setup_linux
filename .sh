@@ -8,11 +8,10 @@ sudo yum install podman-docker
 sudo yum install nano
 sudo yum install wget
 fi
-wsl.exe -d alpine -u root
 if [ -x /sbin/apk ]; then
-apk add sudo
-printf "\n%%wheel ALL=(ALL) ALL" >> /etc/sudoers
-usermod -aG wheel jj
-apk add curl
-apk add nano
+wsl.exe -d alpine -u root apk add bash
+printf "please change the root password by executing \n\n   bash\n   bash <(printf \"wsl.exe -d alpine -u root passwd\")\n\n"
+wsl.exe -d alpine -u root apk add sudo
+wsl.exe -d alpine -u root printf "\n%%wheel ALL=(ALL) ALL"
+wsl.exe -d alpine -u root usermod -aG wheel jj
 fi
