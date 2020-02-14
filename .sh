@@ -10,8 +10,6 @@ sudo yum install wget
 fi
 wsl.exe -d alpine -u root
 if [ -x /sbin/apk ]; then
-passwd
-passwd jj
 apk add sudo
 printf "\n%%wheel ALL=(ALL) ALL" >> /etc/sudoers
 usermod -aG wheel jj
