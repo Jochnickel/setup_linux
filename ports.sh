@@ -12,4 +12,5 @@ Please run
 
     timeout -k 1 1 sudo ssh -L 80:localhost:8080 -g -i /root/.ssh/bwcloud jj@jj22.de
 
+(to establish the ssh tunnel once as a known host)
 "
